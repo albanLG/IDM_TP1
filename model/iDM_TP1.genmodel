@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/IDM_TP1/src-gen" creationIcons="false" editDirectory="/IDM_TP1.edit/src-gen"
+    editorDirectory="/IDM_TP1.editor/src-gen" modelPluginID="IDM_TP1" modelName="IDM_TP1"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>iDM_TP1.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="IDM_TP1" disposableProviderFactory="true" ecorePackage="iDM_TP1.ecore#/">
+    <genClasses ecoreClass="iDM_TP1.ecore#//Expression"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//BinaireExp"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Constant"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Entity"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//JSON_Object">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//JSON_Object/child"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//JSON_Array">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//JSON_Array/child"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Json">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Json/contains"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Json/command"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Command">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Command/json"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//RemoveObj">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//RemoveObj/key"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Key">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Key/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//Key/key"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Read"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Add">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//Add/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//Add/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Write">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//Write/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//RemoveArr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//RemoveArr/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//toCSV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//toCSV/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="iDM_TP1.ecore#//toString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iDM_TP1.ecore#//toString/entity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iDM_TP1" nsURI="http://www.example.org/iDM_TP1" nsPrefix="iDM_TP1">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaireExp" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JSON_Object" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
+        eType="#//Key"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JSON_Array" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
+        eType="#//Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Json">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
+        eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="command" upperBound="-1"
+        eType="#//Command" eOpposite="#//Command/json"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="json" upperBound="-1" eType="#//Json"
+        eOpposite="#//Json/command"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveObj" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Key" instanceTypeName="Key">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Add" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Write" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveArr" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="toCSV" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="toString" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+  </eClassifiers>
+</ecore:EPackage>
