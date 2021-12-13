@@ -17,5 +17,5 @@ Ainsi, notre méta-modèle permet d'avoir des tableaux constitués directement d
 
 Du cotés des commmandes, nous nous sommes basés sur le commandes de base étant faisable par chacune des librairies JackSon, orgJSON, SOJO du coté
 Java et Circe du coté Scala.
-Nous avons fait plusieurs modèles pour vérifier le bon fonctionnement de notre méta-modèle qui sont disponible le dossier model du git. 
-Pour le model concernant le côté commandes, nous avons associé les lignes de code correspondant à l'action demandé.
+Nous avons fait plusieurs modèles pour vérifier le bon fonctionnement de notre méta-modèle qui sont disponibles sur le dossier model du git. 
+Pour le modèle concernant les commandes, nous avons associé les lignes de code correspondant à l'action demandée.
