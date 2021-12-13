@@ -14,6 +14,7 @@ Une expression est soit une entité simple, tel qu'une constante ou encore une e
 Un **JSONArray** contient plusieurs expressions alors qu'un **JSONObject** contient plusieurs objets appelés "keys".
 Une 'key' est une string suivie d'une expression.
 Ainsi, notre méta-modèle permet d'avoir des tableaux constitués directement de valeurs, et des objets composés de duo clés/valeurs.
+
 Du cotés des commmandes, nous nous sommes basés sur le commandes de base étant faisable par chacune des librairies JackSon, orgJSON, SOJO du coté
 Java et Circe du coté Scala.
 Nous avons fait plusieurs modèles pour vérifier le bon fonctionnement de notre méta-modèle qui sont disponible le dossier model du git. 
