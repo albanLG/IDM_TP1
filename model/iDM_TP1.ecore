@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iDM_TP1" nsURI="http://www.example.org/iDM_TP1" nsPrefix="iDM_TP1">
   <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="BinaireExp" eSuperTypes="#//Expression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="JSON_Object" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
@@ -14,10 +14,10 @@
         eType="#//Expression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Json">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
-        eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="command" upperBound="-1"
         eType="#//Command" eOpposite="#//Command/json"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="json" upperBound="-1" eType="#//Json"

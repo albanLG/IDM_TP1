@@ -11,7 +11,7 @@
   <genPackages prefix="IDM_TP1" disposableProviderFactory="true" ecorePackage="iDM_TP1.ecore#/">
     <genClasses ecoreClass="iDM_TP1.ecore#//Expression"/>
     <genClasses ecoreClass="iDM_TP1.ecore#//BinaireExp"/>
-    <genClasses ecoreClass="iDM_TP1.ecore#//Constant"/>
+    <genClasses ecoreClass="iDM_TP1.ecore#//Value"/>
     <genClasses ecoreClass="iDM_TP1.ecore#//Entity"/>
     <genClasses ecoreClass="iDM_TP1.ecore#//JSON_Object">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//JSON_Object/child"/>
@@ -20,8 +20,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//JSON_Array/child"/>
     </genClasses>
     <genClasses ecoreClass="iDM_TP1.ecore#//Json">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Json/contains"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Json/command"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Json/contains"/>
     </genClasses>
     <genClasses ecoreClass="iDM_TP1.ecore#//Command">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iDM_TP1.ecore#//Command/json"/>
